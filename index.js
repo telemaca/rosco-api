@@ -5,7 +5,7 @@ import { validateApiKey } from "./middlewares/validateApiKey.js";
 import definitionsRouter from "./routes/definitions.js";
 
 const app = express();
-const PORT = 8443;
+const PORT = process.env.PORT || 8443;
 
 app.use(express.json());
 app.use(logger);
